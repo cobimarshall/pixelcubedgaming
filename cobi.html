@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Cobi - PixelCubedGaming</title>
+    <style>
+        /* Shared Hub Theme Colors */
+        :root {
+            --bg-dark: #0b1116;
+            --bg-card: #121c24;
+            --cyan-neon: #00f3ff;
+            --orange-neon: #ff7700;
+            --text-light: #ffffff;
+            --text-muted: #a0aec0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 4rem auto 0 auto;
+            background-color: var(--bg-card);
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            position: relative;
+        }
+
+        /* Back Button */
+        .back-btn {
+            position: absolute;
+            top: 1.5rem;
+            left: 2rem;
+            color: var(--cyan-neon);
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            color: var(--orange-neon);
+        }
+
+        /* Header / Avatar Area */
+        .profile-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .profile-avatar {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 1.5rem auto;
+            border-radius: 50%;
+            background-color: #1e2d3b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--orange-neon);
+            box-shadow: 0 0 15px rgba(255, 119, 0, 0.4);
+        }
+
+        .profile-avatar .question-mark {
+            font-size: 4rem;
+            color: var(--cyan-neon);
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, var(--cyan-neon), var(--orange-neon));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .role-tags {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+
+        .tag {
+            background: rgba(0, 243, 255, 0.1);
+            border: 1px solid var(--cyan-neon);
+            color: var(--cyan-neon);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .tag.sports {
+            background: rgba(255, 119, 0, 0.1);
+            border: 1px solid var(--orange-neon);
+            color: var(--orange-neon);
+        }
+
+        /* Content Sections */
+        .bio-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .bio-section h2 {
+            color: var(--cyan-neon);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        p {
+            color: #e2e8f0;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Quotes Block */
+        .quote-box {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--orange-neon);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            margin: 1rem 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <a href="index.html" class="back-btn">&larr; Back to Hub</a>
+
+        <div class="profile-header">
+            <div class="profile-avatar">
+                <span class="question-mark">?</span>
+            </div>
+            <h1>Cobi</h1>
+            <div class="role-tags">
+                <span class="tag">Web Developer</span>
+                <span class="tag">Content Creator</span>
+                <span class="tag sports">Cricket Captain & Wicketkeeper</span>
+            </div>
+        </div>
+
+        <div class="bio-section">
+            <h2>On the Cricket Pitch</h2>
+            <p>I am a 13-year-old wicketkeeper-batsman and cricket captain who loves balancing intense sports competition with tech and content creation. On the pitch, I lead the U13s and play up through the U15s, U17s, and senior men's teams as an aggressive batsman who loves hitting boundaries.</p>
+            <p>Behind the stumps, I bring fast reflexes, loud energy, and a bit of psychological gameplay, keeping the opposition on their toes with on-the-spot sledges:</p>
+            <div class="quote-box">
+                "He’s got more swings than a playground..."
+            </div>
+            <p>My ultimate goal is to reach the county level and play professional cricket at the highest standard.</p>
+        </div>
+
+        <div class="bio-section">
+            <h2>Behind the Screens & Business</h2>
+            <p>When the bails are down, I shift my focus to gaming and digital creation. I used HTML and CSS to build and manage the website for our group's YouTube channel, which focuses on high-energy Minecraft challenges.</p>
+            <p>By leveraging AI tools like Opus Clips to edit our best moments and combining it with my own web development skills, I love finding smart ways to grow our audience. My target is to get the channel monetized soon, building the foundation for a future multi-income stream AI business.</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 PixelCubedGaming. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

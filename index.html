@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelCubedGaming</title>
+    <style>
+        /* Base Styles & Theme Colors matching the logo */
+        :root {
+            --bg-dark: #0b1116;
+            --bg-card: #121c24;
+            --cyan-neon: #00f3ff;
+            --orange-neon: #ff7700;
+            --text-light: #ffffff;
+            --text-muted: #a0aec0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: rgba(18, 28, 36, 0.95);
+            padding: 0.8rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--cyan-neon);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--cyan-neon);
+            text-decoration: none;
+            line-height: 1.2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--orange-neon);
+        }
+
+        /* Hero Section (Home Screen) */
+        header {
+            padding: 9rem 2rem 4rem 2rem;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .main-logo {
+            max-width: 250px;
+            width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 0 20px var(--cyan-neon), 0 0 40px var(--orange-neon);
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(45deg, var(--cyan-neon), var(--orange-neon));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .handle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .about-box {
+            background-color: var(--bg-card);
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: left;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-box h2 {
+            color: var(--cyan-neon);
+            margin-bottom: 1rem;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--cyan-neon);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--orange-neon);
+            margin: 0.5rem auto 0 auto;
+            border-radius: 2px;
+        }
+
+        /* Meet the Crew Section */
+        .crew-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .crew-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .crew-card {
+            background-color: var(--bg-card);
+            border: 1px solid rgba(255, 119, 0, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .crew-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(255, 119, 0, 0.4);
+            border-color: var(--cyan-neon);
+        }
+
+        .avatar-box {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1.5rem auto;
+            border-radius: 50%;
+            background-color: #1e2d3b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--cyan-neon);
+            overflow: hidden;
+        }
+
+        .avatar-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .avatar-box .question-mark {
+            font-size: 3.5rem;
+            color: var(--orange-neon);
+            font-weight: bold;
+        }
+
+        .crew-name {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* Enquiries & Video Ideas Section */
+        .enquiries-box {
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid rgba(0, 243, 255, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: var(--bg-dark);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            color: #ffffff;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--cyan-neon);
+        }
+
+        .submit-btn {
+            background: linear-gradient(45deg, var(--cyan-neon), var(--orange-neon));
+            color: #ffffff;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: opacity 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            opacity: 0.9;
+        }
+
+        .success-msg {
+            display: none;
+            color: #00ff66;
+            text-align: center;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        /* Submissions Display Dashboard Area */
+        .dashboard-box {
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 2rem auto 0 auto;
+            border: 1px solid rgba(255, 119, 0, 0.3);
+        }
+
+        .idea-item {
+            background-color: var(--bg-dark);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .idea-user {
+            color: var(--cyan-neon);
+            font-weight: bold;
+            margin-bottom: 0.3rem;
+        }
+
+        /* Dynamic video widget layout wrapper */
+        .widget-container {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        /* Footer & Social Media Icons Layout */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            background-color: #080d11;
+        }
+
+        .social-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        .social-link svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+            transition: filter 0.3s ease;
+        }
+
+        .social-link:hover {
+            transform: translateY(-2px);
+        }
+
+        .social-link.youtube:hover {
+            color: #ff0000;
+            filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.6));
+        }
+
+        .social-link.discord:hover {
+            color: #5865F2;
+            filter: drop-shadow(0 0 8px rgba(88, 101, 242, 0.6));
+        }
+
+        .social-link.tiktok:hover {
+            color: #00f3ff;
+            filter: drop-shadow(0 0 8px rgba(0, 243, 255, 0.6));
+        }
+
+        .copyright-text {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="nav-logo"><span>PixelCubedGaming</span><span>Hub</span></a>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#crew">Meet the Crew</a></li>
+            <li><a href="#ideas">Video Ideas</a></li>
+            <li><a href="#videos">Videos</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <img src="logo.png" alt="PixelCubedGaming Logo" class="main-logo">
+        <h1>PixelCubedGaming</h1>
+        <div class="handle">(@pixelcubedgaming26)</div>
+        
+        <div class="about-box">
+            <h2>Our Story</h2>
+            <p>Welcome to PixelCubedGaming! We are a group channel focused on bringing you the best Minecraft gaming content. Here is the story of how our channel came about, the adventures we go on, and everything we love about the blocky world.</p>
+        </div>
+    </header>
+
+    <section id="crew">
+        <h2 class="section-title">Meet the Crew</h2>
+        <div class="crew-container">
+            
+            <a href="creepy.html" class="crew-link">
+                <div class="crew-card">
+                    <div class="avatar-box">
+                        <img src="creepy-logo.png" alt="Creepy">
+                    </div>
+                    <div class="crew-name">Creepy</div>
+                </div>
+            </a>
+
+            <a href="ojohhh13.html" class="crew-link">
+                <div class="crew-card">
+                    <div class="avatar-box">
+                        <img src="ojohhh13-logo.png" alt="OJohhh13">
+                    </div>
+                    <div class="crew-name">OJohhh13</div>
+                </div>
+            </a>
+
+            <a href="cobi.html" class="crew-link">
+                <div class="crew-card">
+                    <div class="avatar-box">
+                        <span class="question-mark">?</span>
+                    </div>
+                    <div class="crew-name">Cobi</div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <section id="ideas">
+        <h2 class="section-title">Submit Video Ideas</h2>
+        <div class="enquiries-box">
+            <form id="ideaForm">
+                <div class="form-group">
+                    <label for="name">Your Name / Username</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="idea">Your Video Idea or Enquiry</label>
+                    <textarea id="idea" name="idea" rows="5" required placeholder="What kind of Minecraft challenge or video should we do next?"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Idea!</button>
+                <div id="successMessage" class="success-msg">Idea saved locally below! ✔</div>
+            </form>
+        </div>
+
+        <div class="dashboard-box">
+            <h3 style="color: var(--orange-neon); margin-bottom: 1rem;">Local Submissions Dashboard</h3>
+            <div id="submissionsList">
+                <p style="color: var(--text-muted);">No ideas submitted yet on this browser session.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="videos">
+        <h2 class="section-title">Latest Videos</h2>
+        <div class="widget-container">
+            
+            <iframe onload="iFrameSetup(this)" src="https://app.mirror-app.com/feed-youtube/9a6b1a10-f2ac-4946-bb4f-7d6c010ab6dc/preview" style="width:100%;border:none;overflow:hidden;" scrolling="no"></iframe>
+            <script src="https://cdn.jsdelivr.net/npm/@mirrorapp/iframe-bridge@latest/dist/index.umd.js"></script>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-container">
+            <a href="https://youtube.com/@pixelcubedgaming26?si=KdeIwY0cMNOvOBb_" target="_blank" class="social-link youtube">
+                <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                @pixelcubedgaming26
+            </a>
+
+            <a href="https://discord.gg/TZA4gz99Jp" target="_blank" class="social-link discord">
+                <svg viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.873-.894.077.077 0 0 1-.008-.128c.126-.093.252-.19.372-.287a.075.075 0 0 1 .077-.011c3.92 1.793 8.18 1.793 12.061 0a.073.073 0 0 1 .078.009c.12.099.246.195.373.289a.077.077 0 0 1-.006.127 12.298 12.298 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.156 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.156 2.418z"/></svg>
+                Join Discord
+            </a>
+
+            <a href="https://www.tiktok.com/@pixelcubedgaming" target="_blank" class="social-link tiktok">
+                <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.032 2.61-.019 3.91-.019.17 1.98.98 3.79 2.47 5.06.84.71 1.83 1.21 2.89 1.48v3.83c-1.6-.14-3.13-.77-4.38-1.77-.32-.26-.6-.54-.86-.84v6.8c0 4.41-3.59 8.01-8.01 8.01-4.22 0-7.66-3.28-7.98-7.46-.38-5.06 3.63-9.4 8.7-9.02.13.01.26.02.38.04v3.87c-.12-.02-.24-.03-.36-.03-2.24-.13-4.14 1.57-4.33 3.81-.22 2.52 1.74 4.7 4.26 4.73 2.1.02 3.87-1.57 4.09-3.66.02-.23.03-.46.03-.69V0h1.2z"/></svg>
+                @pixelcubedgaming
+            </a>
+        </div>
+        <div class="copyright-text">&copy; 2026 PixelCubedGaming. All Rights Reserved.</div>
+    </footer>
+
+    <script>
+        const ideaForm = document.getElementById('ideaForm');
+        const submissionsList = document.getElementById('submissionsList');
+        const successMessage = document.getElementById('successMessage');
+
+        function loadSubmissions() {
+            const savedData = localStorage.getItem('pcg_ideas');
+            const ideasArray = savedData ? JSON.parse(savedData) : [];
+            
+            if (ideasArray.length === 0) {
+                submissionsList.innerHTML = '<p style="color: var(--text-muted);">No ideas submitted yet on this browser session.</p>';
+                return;
+            }
+
+            submissionsList.innerHTML = ideasArray.map(item => `
+                <div class="idea-item">
+                    <div class="idea-user">${escapeHTML(item.username)}</div>
+                    <div style="color: #ffffff;">${escapeHTML(item.text)}</div>
+                </div>
+            `).join('');
+        }
+
+        function escapeHTML(str) {
+            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+
+        ideaForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const username = document.getElementById('name').value;
+            const text = document.getElementById('idea').value;
+
+            const savedData = localStorage.getItem('pcg_ideas');
+            const ideasArray = savedData ? JSON.parse(savedData) : [];
+
+            ideasArray.push({ username, text });
+            localStorage.setItem('pcg_ideas', JSON.stringify(ideasArray));
+
+            loadSubmissions();
+            ideaForm.reset();
+
+            successMessage.style.display = 'block';
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 3000);
+        });
+
+        window.onload = loadSubmissions;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Creepy - PixelCubedGaming</title>
+    <style>
+        /* Shared Hub Theme Colors */
+        :root {
+            --bg-dark: #0b1116;
+            --bg-card: #121c24;
+            --cyan-neon: #00f3ff;
+            --orange-neon: #ff7700;
+            --text-light: #ffffff;
+            --text-muted: #a0aec0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 4rem auto 0 auto;
+            background-color: var(--bg-card);
+            border: 1px solid rgba(255, 119, 0, 0.2);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            position: relative;
+        }
+
+        /* Back Button */
+        .back-btn {
+            position: absolute;
+            top: 1.5rem;
+            left: 2rem;
+            color: var(--cyan-neon);
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            color: var(--orange-neon);
+        }
+
+        /* Header / Avatar Area */
+        .profile-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .profile-avatar {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 1.5rem auto;
+            border-radius: 50%;
+            background-color: #1e2d3b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--cyan-neon);
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+            overflow: hidden;
+        }
+
+        .profile-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, var(--orange-neon), var(--cyan-neon));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .role-tags {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+
+        .tag {
+            background: rgba(255, 119, 0, 0.1);
+            border: 1px solid var(--orange-neon);
+            color: var(--orange-neon);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .tag.skills {
+            background: rgba(0, 243, 255, 0.1);
+            border: 1px solid var(--cyan-neon);
+            color: var(--cyan-neon);
+        }
+
+        /* Content Sections */
+        .bio-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .bio-section h2 {
+            color: var(--orange-neon);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        p {
+            color: #e2e8f0;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Focus Highlight Box */
+        .focus-box {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--cyan-neon);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1rem 0;
+            color: #ffffff;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <a href="index.html" class="back-btn">&larr; Back to Hub</a>
+
+        <div class="profile-header">
+            <div class="profile-avatar">
+                <img src="creepy-logo.png" alt="Creepy">
+            </div>
+            <h1>Creepy</h1>
+            <div class="role-tags">
+                <span class="tag">Gamer</span>
+                <span class="tag skills">Future Video Editor</span>
+                <span class="tag skills">YouTuber</span>
+            </div>
+        </div>
+
+        <div class="bio-section">
+            <h2>The Gaming Grind</h2>
+            <p>I am someone who loves spending my free weekend afternoons diving into digital worlds, especially playing Minecraft on PC with my friends. Lately, I've been spending a ton of my time on my PC, completely locked into gaming and exploring the internet.</p>
+            <div class="focus-box">
+                <strong>Current Objective:</strong> Hanging out with friends, enjoying the PC grind, and constantly exploring the web.
+            </div>
+            <p>While I might not have a massive list of specific projects or niche roles just yet, I know exactly where my focus lies when I am online.</p>
+        </div>
+
+        <div class="bio-section">
+            <h2>Future & Creative Vision</h2>
+            <p>Looking ahead, my big dream is to break into the creative side of the digital world as a video editor. I want to take our gaming moments and turn them into highly engaging content.</p>
+            <p>I also know that if I put the effort in and try hard enough, I have the potential to make it as a YouTuber. For me, it's all about working toward turning my love for video content into something much bigger for the future.</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 PixelCubedGaming. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

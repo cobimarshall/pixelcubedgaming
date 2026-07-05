@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About OJohhh13 - PixelCubedGaming</title>
+    <style>
+        /* Shared Hub Theme Colors */
+        :root {
+            --bg-dark: #0b1116;
+            --bg-card: #121c24;
+            --cyan-neon: #00f3ff;
+            --orange-neon: #ff7700;
+            --text-light: #ffffff;
+            --text-muted: #a0aec0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 4rem auto 0 auto;
+            background-color: var(--bg-card);
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            position: relative;
+        }
+
+        /* Back Button */
+        .back-btn {
+            position: absolute;
+            top: 1.5rem;
+            left: 2rem;
+            color: var(--cyan-neon);
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            color: var(--orange-neon);
+        }
+
+        /* Header / Avatar Area */
+        .profile-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .profile-avatar {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 1.5rem auto;
+            border-radius: 50%;
+            background-color: #1e2d3b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--orange-neon);
+            box-shadow: 0 0 15px rgba(255, 119, 0, 0.4);
+            overflow: hidden;
+        }
+
+        .profile-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, var(--cyan-neon), var(--orange-neon));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .role-tags {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+
+        .tag {
+            background: rgba(0, 243, 255, 0.1);
+            border: 1px solid var(--cyan-neon);
+            color: var(--cyan-neon);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .tag.creative {
+            background: rgba(255, 119, 0, 0.1);
+            border: 1px solid var(--orange-neon);
+            color: var(--orange-neon);
+        }
+
+        /* Content Sections */
+        .bio-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .bio-section h2 {
+            color: var(--cyan-neon);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        p {
+            color: #e2e8f0;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Project Box */
+        .project-highlight {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--orange-neon);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1rem 0;
+        }
+
+        .project-highlight strong {
+            color: var(--orange-neon);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <a href="index.html" class="back-btn">&larr; Back to Hub</a>
+
+        <div class="profile-header">
+            <div class="profile-avatar">
+                <img src="ojohhh13-logo.png" alt="OJohhh13">
+            </div>
+            <h1>OJohhh13</h1>
+            <div class="role-tags">
+                <span class="tag creative">Musician</span>
+                <span class="tag creative">Animator</span>
+                <span class="tag">Gaming YouTuber</span>
+            </div>
+        </div>
+
+        <div class="bio-section">
+            <h2>Music & Creative Drive</h2>
+            <p>I am someone who lives and breathes music, creativity, and gaming. My absolute favorite way to spend a weekend is either catching live music at a concert or diving into a gaming session.</p>
+            <p>Guitar is my all-time favorite hobby, and I love channeling that creative energy into cool side projects:</p>
+            
+            <div class="project-highlight">
+                <strong>Featured Creation:</strong> Meticulously crafted stop-motion Titanic film—easily the coolest project built for my YouTube channel so far.
+            </div>
+        </div>
+
+        <div class="bio-section">
+            <h2>Future Ambitions</h2>
+            <p>Looking ahead, my biggest dreams revolve around my passions for music and content creation. I want to take my guitar skills to the next level by playing in a band, or focus on growing my presence online as a gaming YouTuber.</p>
+            <p>Whether I'm rocking out on stage, creating meticulous animations, or entertaining viewers, my goal is to keep creating and doing what I love.</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 PixelCubedGaming. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
